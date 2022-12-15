@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MoveForwards : MonoBehaviour
+public class Projectile : MonoBehaviour
 {
     //variables
     public float launchForce = 10f; // Move speed
