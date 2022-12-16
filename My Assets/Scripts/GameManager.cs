@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
     //variables
     private float Scores1;
     private float Scores2;
-    private float tPoints;
+    public float tPoints;
 
 
     public void updateScore1(float score1)
