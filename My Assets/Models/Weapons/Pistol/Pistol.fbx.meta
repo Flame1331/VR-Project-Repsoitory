@@ -3,7 +3,37 @@ guid: 01ef0cfbcff38c240b456d741132f01e
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Barrle color
+    second: {fileID: 2100000, guid: c0843158c269e8d4992c4c9f1abbe24f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Main color
+    second: {fileID: 2100000, guid: d3e035c1c83a4824baee7eabe077396c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material
+    second: {fileID: 2100000, guid: db195b66237fa1a489d684b09cc7e22f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Transparent
+    second: {fileID: 2100000, guid: 1a586ac1569411145828c1f37a77eaa2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Trigger color
+    second: {fileID: 2100000, guid: 575f45f2b333a874a83754edc9de324f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bullet
+    second: {fileID: 2100000, guid: 5f5945a240b96b64e9b2dcf2b8e26c06, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
