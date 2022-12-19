@@ -5,13 +5,16 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
     //variables
-    public float launchForce = 10f; // Move speed
+    private float launchForce = 30f; // Move speed
 
     //Game manager
     public GameManager gamemanager;
 
     //rigidbody
     private Rigidbody body;
+
+    public float score1 = 0;
+    public float score2 = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -26,12 +29,14 @@ public class Projectile : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Range 1"))
         {
-            gamemanager.updateScore1(Random.Range(100, 150));
+            score1 = score1 + Random.Range(100, 150);
+            gamemanager.updateScore1(score1);
             StartCoroutine(destroytime());
         }
         if (collision.gameObject.CompareTag("Range 2"))
         {
-            gamemanager.updateScore2(Random.Range(100, 150));
+            score2 = score2 + Random.Range(100, 150);
+            gamemanager.updateScore2(score2 + Random.Range(100, 150));
             StartCoroutine(destroytime());
         }
         if (collision.gameObject.CompareTag("Room Parts"))
