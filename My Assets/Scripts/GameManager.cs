@@ -12,6 +12,9 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI Score2;
     public TextMeshProUGUI Points;
 
+    public TextMeshProUGUI exitPoints;
+    public TextMeshProUGUI Range2Points;
+
     //Pistol Text
     public TextMeshProUGUI pistolAmmo;
 
@@ -41,11 +44,19 @@ public class GameManager : MonoBehaviour
     public void updatePoints(float points)
     {
         Points.text = "Points: " + tPoints;
+        Range2Points.text = "Current Points: " + tPoints;
+        exitPoints.text = "Current Points: " + tPoints;
+
     }
 
     public void updateAmmo(int ammo)
     {
         pistolAmmo.text = "Ammo: " + ammo + "/10";
+    }
+
+    public void RESETS()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
 

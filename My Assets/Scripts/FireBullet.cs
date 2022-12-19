@@ -5,7 +5,14 @@ using UnityEngine;
 public class FireBullet : MonoBehaviour
 {
     //Game Manager
-    public GameManager gamemanager;
+    private GameManager gamemanager;
+
+    //Sound SFX
+    private AudioSource Pistol;
+    public AudioClip Loaded;
+    public AudioClip Empty;
+
+
 
     //game objects
     public GameObject bullet;
@@ -22,6 +29,7 @@ public class FireBullet : MonoBehaviour
     void Start()
     {
         gamemanager = GameObject.Find("Game Manager").GetComponent<GameManager>();
+        Pistol = GetComponent<AudioSource>();
     }
 
 
@@ -37,6 +45,8 @@ public class FireBullet : MonoBehaviour
     public void MagOut()
     {
         magIn = false;
+        ammo = 0;
+        gamemanager.updateAmmo(ammo);
     }
 
 
@@ -48,6 +58,9 @@ public class FireBullet : MonoBehaviour
             //spawn bullet
             Instantiate(bullet, bullet_exit.position, bullet_exit.rotation);
 
+            //Sfx
+            Pistol.PlayOneShot(Loaded, 1);
+
             //spawn empty bullet case
             Instantiate(bullet_Case, case_exit.position, case_exit.rotation);
 
@@ -57,6 +70,11 @@ public class FireBullet : MonoBehaviour
             ammo -= 1;
             gamemanager.updateAmmo(ammo);
         }
+        else
+        {
+            Pistol.PlayOneShot(Empty, 1);
+        }
+
     }
 
 

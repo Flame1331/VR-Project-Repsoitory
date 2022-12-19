@@ -25,6 +25,9 @@ public class ExitDoor : MonoBehaviour
     }
 
 
+
+
+
     public void OpenExit()
     {
         if(points > 2000)

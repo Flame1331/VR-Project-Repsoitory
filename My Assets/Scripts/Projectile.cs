@@ -24,12 +24,12 @@ public class Projectile : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.CompareTag("Range1"))
+        if(collision.gameObject.CompareTag("Range 1"))
         {
             gamemanager.updateScore1(Random.Range(100, 150));
             StartCoroutine(destroytime());
         }
-        if (collision.gameObject.CompareTag("Range2"))
+        if (collision.gameObject.CompareTag("Range 2"))
         {
             gamemanager.updateScore2(Random.Range(100, 150));
             StartCoroutine(destroytime());
