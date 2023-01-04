@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 3422998081863611565}
   - component: {fileID: 3320455851390486918}
   m_Layer: 0
-  m_Name: mag
+  m_Name: Pistol mag
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
